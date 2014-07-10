@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PluginApp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/plugin-app.css">
+  </head>
+  <body>
+    <script>
+      window.PluginAppENV = {{ENV}};
+      window.EmberENV = window.PluginAppENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/plugin-app.js"></script>
+    <script>
+      window.PluginApp = require('plugin-app/app')['default'].create(PluginAppENV.APP);
+    </script>
+  </body>
+</html>
